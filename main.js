@@ -151,6 +151,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     console.log('HearoPilot Landing Page Loaded');
+
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
 
 function handleNotify(e) {

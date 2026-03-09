@@ -24,6 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 
 <body>
@@ -57,7 +58,7 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-top-row">
-                        <div class="privacy-tag"><span>🔒</span> 100% Local AI • No Cloud</div>
+                        <div class="privacy-tag"><i data-lucide="lock"></i> 100% Local AI • No Cloud</div>
                         <div class="waveform-bars" aria-hidden="true">
                             <span></span><span></span><span></span><span></span><span></span>
                             <span></span><span></span><span></span><span></span><span></span>
@@ -67,7 +68,7 @@
                     <h1 class="gradient-text">Private voice transcription. Smart AI Notes.</h1>
                     <p>Experience the only transcription tool that never touches the cloud. HearoPilot processes your
                         voice, text, and insights 100% offline on your device. Your data never leaves your pocket.</p>
-                    <div class="coming-soon-badge">🚀 Launching soon on Google Play</div>
+                    <div class="coming-soon-badge"><i data-lucide="rocket"></i> Launching soon on Google Play</div>
                     <div class="hero-btns">
                         <a href="#notify" class="btn-primary">Get Notified</a>
                         <a href="#why" class="btn-secondary">Learn More</a>
@@ -97,27 +98,27 @@
                     </div>
                     <div class="modes-grid" id="why-track">
                         <div class="mode-card">
-                            <div class="icon">🔒</div>
+                            <div class="icon"><i data-lucide="shield"></i></div>
                             <h3>100% Private & Offline</h3>
                             <p>Military-grade local processing. Most apps send your voice to servers for analysis—we
                                 don't. Your recordings, transcripts, and AI notes are processed and stored only on your
                                 device.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">⚡</div>
+                            <div class="icon"><i data-lucide="zap"></i></div>
                             <h3>Instant Edge STT</h3>
                             <p>Watch your words turn into text instantly with on-device LLMs. No waiting for uploads, no
                                 latency, and zero dependency on internet connections. Real-time accuracy without the
                                 risk.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">🧠</div>
+                            <div class="icon"><i data-lucide="brain"></i></div>
                             <h3>Local AI Insights</h3>
                             <p>Private intelligence. Our local AI models analyze your speech to provide summaries and
                                 action items without ever exposing your data to third-party APIs or cloud trackers.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">🔋</div>
+                            <div class="icon"><i data-lucide="battery-charging"></i></div>
                             <h3>Efficient & Unlimited</h3>
                             <p>Enterprise-ready performance. Optimized local algorithms ensure recording doesn't drain
                                 your battery. No session limits, no subscription tiers for privacy, just total control.
@@ -146,25 +147,25 @@
                     </div>
                     <div class="modes-grid" id="modes-track">
                         <div class="mode-card">
-                            <div class="icon">👂</div>
+                            <div class="icon"><i data-lucide="ear"></i></div>
                             <h3>Simple Listening</h3>
                             <p>Perfect for quick notes or single thoughts. Provides a concise final summary of your
                                 recording.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">🤝</div>
+                            <div class="icon"><i data-lucide="users"></i></div>
                             <h3>Short Meeting</h3>
                             <p>Ideal for focused discussions. Real-time detection of tasks, suggestions, and key
                                 takeaways.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">🏛️</div>
+                            <div class="icon"><i data-lucide="presentation"></i></div>
                             <h3>Long Meeting</h3>
                             <p>Designed for conferences and lectures. Comprehensive analysis of extended sessions with
                                 periodic updates.</p>
                         </div>
                         <div class="mode-card">
-                            <div class="icon">🌐</div>
+                            <div class="icon"><i data-lucide="languages"></i></div>
                             <h3 style="display: inline-flex; align-items: center; gap: 0.5rem;">Live Translation <span
                                     class="new-badge" style="margin: 0;">PREVIEW</span></h3>
                             <p>Break language barriers. Translates speech as you speak, keeping the raw context intact
@@ -178,25 +179,41 @@
         <section id="features" class="insights-section">
             <div class="container">
                 <div class="insight-split">
+                    <div class="insight-visual">
+                        <div class="json-preview">
+                            <pre><code><span style="color:#888">// AI Insights Output</span>
+{
+  <span style="color:#8B63F0">"summary"</span>: <span style="color:#a8ff78">"Q3 strategy meeting.
+  Focus on mobile growth."</span>,
+  <span style="color:#8B63F0">"key_points"</span>: [
+    <span style="color:#a8ff78">"Launch in EU by Q4"</span>,
+    <span style="color:#a8ff78">"Hire 3 engineers"</span>
+  ],
+  <span style="color:#8B63F0">"action_items"</span>: [
+    {
+      <span style="color:#8B63F0">"task"</span>: <span style="color:#a8ff78">"Send proposal"</span>,
+      <span style="color:#8B63F0">"owner"</span>: <span style="color:#a8ff78">"Sara"</span>
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
                     <div class="insight-text">
                         <h2 class="section-title" style="text-align: left;">Smarter AI Insights</h2>
                         <p>HearoPilot doesn't just transcribe; it understands. It automatically organizes your
                             conversations into actionable data.</p>
                         <ul class="feature-list">
-                            <li><span>📊</span>
+                            <li><i data-lucide="bar-chart-2"></i>
                                 <div><strong>Quick Summaries:</strong> Get the gist of any meeting in seconds.</div>
                             </li>
-                            <li><span>🔍</span>
+                            <li><i data-lucide="tag"></i>
                                 <div><strong>Key Points:</strong> Automatically highlight the most important topics.
                                 </div>
                             </li>
-                            <li><span>✅</span>
+                            <li><i data-lucide="check-circle"></i>
                                 <div><strong>Action Items:</strong> Detect tasks and to-dos from your speech.</div>
                             </li>
                         </ul>
-                    </div>
-                    <div class="insight-visual">
-                        <img src="assets/screen3.png" alt="HearoPilot AI Insights Screen" class="insight-img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -208,27 +225,27 @@
                 <p class="section-subtitle">Everything you need, nothing you don't.</p>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-item-icon">🚀</div>
+                        <div class="feature-item-icon"><i data-lucide="infinity"></i></div>
                         <div class="feature-item-label">Unlimited Recording</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item-icon">🚇</div>
+                        <div class="feature-item-icon"><i data-lucide="wifi-off"></i></div>
                         <div class="feature-item-label">100% Offline</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item-icon">🌐</div>
+                        <div class="feature-item-icon"><i data-lucide="globe"></i></div>
                         <div class="feature-item-label">25+ UI Languages</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item-icon">🌙</div>
+                        <div class="feature-item-icon"><i data-lucide="moon"></i></div>
                         <div class="feature-item-label">Dark Mode Native</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item-icon">🔋</div>
+                        <div class="feature-item-icon"><i data-lucide="battery"></i></div>
                         <div class="feature-item-label">Battery Optimized</div>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item-icon">🔍</div>
+                        <div class="feature-item-icon"><i data-lucide="search"></i></div>
                         <div class="feature-item-label">Searchable History</div>
                     </div>
                 </div>
@@ -317,7 +334,7 @@
         <section id="notify" class="notify-section">
             <div class="container">
                 <div class="notify-card">
-                    <div class="privacy-tag" style="margin-bottom: 1.5rem;"><span>🚀</span> Launching Soon</div>
+                    <div class="privacy-tag" style="margin-bottom: 1.5rem;"><i data-lucide="rocket"></i> Launching Soon</div>
                     <h2 class="section-title" style="margin-bottom: 1rem;">Be the first to try HearoPilot</h2>
                     <p class="section-subtitle" style="margin-bottom: 2.5rem;">HearoPilot is coming to Google Play very soon. Drop your email and we'll let you know the moment it's live.</p>
                     <form class="notify-form" onsubmit="handleNotify(event)">
@@ -355,7 +372,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 HearoPilot. All rights reserved.</p>
-                <div class="coming-soon-badge" style="margin-bottom:0; font-size:0.75rem; padding: 0.3rem 0.9rem;">🚀 Coming soon to Google Play</div>
+                <div class="coming-soon-badge" style="margin-bottom:0; font-size:0.75rem; padding: 0.3rem 0.9rem;"><i data-lucide="rocket"></i> Coming soon to Google Play</div>
             </div>
         </div>
     </footer>
