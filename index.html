@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -56,7 +56,14 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="privacy-tag"><span>🔒</span> 100% Local AI • No Cloud</div>
+                    <div class="hero-top-row">
+                        <div class="privacy-tag"><span>🔒</span> 100% Local AI • No Cloud</div>
+                        <div class="waveform-bars" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
                     <h1 class="gradient-text">Private voice transcription. Smart AI Notes.</h1>
                     <p>Experience the only transcription tool that never touches the cloud. HearoPilot processes your
                         voice, text, and insights 100% offline on your device. Your data never leaves your pocket.</p>
@@ -210,15 +217,40 @@
         <section id="key-features" class="key-features-section">
             <div class="container">
                 <h2 class="section-title">Key Features</h2>
-                <div class="features-list-grid">
-                    <div class="feature-badge">🚀 Unlimited Recording</div>
-                    <div class="feature-badge">🚇 100% Offline</div>
-                    <div class="feature-badge">🌐 25+ UI Languages</div>
-                    <div class="feature-badge">📲 Screen-Off Support</div>
-                    <div class="feature-badge">🔄 Resumable Downloads</div>
-                    <div class="feature-badge">🌙 Dark Mode Native</div>
-                    <div class="feature-badge">🔋 Battery Optimized</div>
-                    <div class="feature-badge">🔍 Searchable History</div>
+                <p class="section-subtitle">Everything you need, nothing you don't.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🚀</div>
+                        <div class="feature-item-label">Unlimited Recording</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🚇</div>
+                        <div class="feature-item-label">100% Offline</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🌐</div>
+                        <div class="feature-item-label">25+ UI Languages</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">📲</div>
+                        <div class="feature-item-label">Screen-Off Support</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🔄</div>
+                        <div class="feature-item-label">Resumable Downloads</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🌙</div>
+                        <div class="feature-item-label">Dark Mode Native</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🔋</div>
+                        <div class="feature-item-label">Battery Optimized</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item-icon">🔍</div>
+                        <div class="feature-item-label">Searchable History</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -313,18 +345,30 @@
 
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="logo" style="justify-content: center; margin-bottom: 2rem;">
-                    <img src="assets/logo_hearo_pilot_3.png" alt="HearoPilot Logo">
-                    <span class="logo-text">HearoPilot</span>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="assets/logo_hearo_pilot_3.png" alt="HearoPilot Logo">
+                        <span class="logo-text">HearoPilot</span>
+                    </div>
+                    <p class="footer-tagline">Your voice. Your data. Your device.</p>
                 </div>
-                <p>Experience the power of private, automated note-taking. Stop typing and start listening.</p>
-                <div class="social-links">
+                <div class="footer-links-group">
+                    <span class="footer-group-title">Product</span>
+                    <a href="#why">Why HearoPilot</a>
+                    <a href="#modes">Recording Modes</a>
+                    <a href="#features">AI Insights</a>
+                    <a href="#roadmap">Roadmap</a>
+                </div>
+                <div class="footer-links-group">
+                    <span class="footer-group-title">Legal</span>
                     <a href="https://docs.google.com/document/d/e/2PACX-1vQ4CjyggeCtjVzWr1IFbIM1Viimdc7rGEJhuJGEMz-SAFQ-ojkh4MCkU4V8fx92jWHeQvd2NTLM8Ky5/pub"
                         target="_blank">Privacy Policy</a>
                 </div>
-                <p style="margin-top: 3rem; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 HearoPilot. All rights
-                    reserved.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HearoPilot. All rights reserved.</p>
+                <div class="coming-soon-badge" style="margin-bottom:0; font-size:0.75rem; padding: 0.3rem 0.9rem;">🚀 Coming soon to Google Play</div>
             </div>
         </div>
     </footer>
