@@ -35,6 +35,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: var(--text-main);
@@ -1099,6 +1103,8 @@ footer {
     align-items: center;
     gap: 1.2rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 /* Waveform bars */
@@ -1201,5 +1207,9 @@ footer {
 
     .hero-visual:hover .app-demo {
         transform: none;
+    }
+
+    .waveform-bars {
+        display: none;
     }
 }
