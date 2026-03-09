@@ -49,10 +49,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.mode-card, .insight-text, .insight-visual, .gallery-card, .feature-badge, .section-title, .section-subtitle').forEach(el => {
+    // Exclude .mode-card and .gallery-card: on mobile they're in scroll containers
+    // where IntersectionObserver is unreliable, causing cards to stay invisible.
+    document.querySelectorAll('.insight-text, .insight-visual, .feature-item, .section-title, .section-subtitle, .roadmap-item, .notify-card').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(40px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
         observer.observe(el);
     });
 
@@ -124,6 +126,29 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCarousel('why-track', 'why-prev', 'why-next');
     setupCarousel('gallery-track', 'gallery-prev', 'gallery-next');
     setupCarousel('roadmap-track', 'roadmap-prev', 'roadmap-next');
+
+    // Gallery dots
+    const galleryTrack = document.getElementById('gallery-track');
+    const dots = document.querySelectorAll('.gallery-dot');
+
+    if (galleryTrack && dots.length) {
+        galleryTrack.addEventListener('scroll', () => {
+            const cards = galleryTrack.querySelectorAll('.gallery-card');
+            const scrollLeft = galleryTrack.scrollLeft;
+            const cardWidth = cards[0]?.offsetWidth + 16; // width + gap
+            const activeIndex = Math.round(scrollLeft / cardWidth);
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === activeIndex));
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const cards = galleryTrack.querySelectorAll('.gallery-card');
+                const index = parseInt(dot.dataset.index);
+                const cardWidth = cards[0]?.offsetWidth + 16;
+                galleryTrack.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+            });
+        });
+    }
 
     console.log('HearoPilot Landing Page Loaded');
 });

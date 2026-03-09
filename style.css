@@ -924,13 +924,45 @@ footer {
         display: none;
     }
 
-    .modes-grid,
-    .gallery-grid {
+    /* Stack Why / Modes / Roadmap vertically */
+    .modes-grid {
+        flex-direction: column;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        gap: 1.2rem;
         padding: 1rem 0;
     }
 
     .mode-card {
-        flex: 0 0 280px;
+        flex: none;
+        width: 100%;
+        min-height: auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .roadmap-grid {
+        flex-direction: column;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        gap: 1.2rem;
+        margin-top: 2rem;
+    }
+
+    .roadmap-item {
+        flex: none;
+        width: 100%;
+    }
+
+    /* Gallery: keep horizontal, show peek of next card */
+    .gallery-grid {
+        padding: 1rem 0 0.5rem;
+        gap: 1rem;
+    }
+
+    .gallery-card {
+        flex: 0 0 80vw;
+        min-height: auto;
+        scroll-snap-align: center;
     }
 
     .hero .container,
@@ -1144,6 +1176,37 @@ footer {
     50% { transform: scaleY(0.25); }
 }
 
+/* Gallery dots */
+.gallery-dots {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.gallery-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--glass-border);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-dot.active {
+    background: var(--primary);
+    width: 20px;
+    border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+    .gallery-dots {
+        display: flex;
+    }
+}
+
 /* Mobile section padding reduction */
 @media (max-width: 900px) {
     .designed-section,
@@ -1173,15 +1236,6 @@ footer {
     .notify-form .btn-primary {
         width: 100%;
         text-align: center;
-    }
-
-    .mode-card {
-        min-height: 340px;
-    }
-
-    .gallery-card {
-        min-height: auto;
-        flex: 0 0 240px;
     }
 
     .features-grid {
