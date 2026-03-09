@@ -9,6 +9,24 @@
     --text-dim: #A0A0B0;
     --gradient-bg: linear-gradient(135deg, #0F0C29 0%, #302B63 50%, #24243E 100%);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --privacy-glow: rgba(94, 62, 229, 0.4);
+}
+
+.privacy-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(94, 62, 229, 0.15);
+    border: 1px solid var(--primary);
+    color: var(--secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 20px var(--privacy-glow);
 }
 
 * {
@@ -161,7 +179,6 @@ nav a:hover {
     border-radius: 50px;
     text-decoration: none;
     transition: background 0.3s;
-    margin-left: 1rem;
 }
 
 .btn-secondary:hover {
@@ -170,10 +187,11 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 5rem;
+    padding: 8rem 0 3rem;
+    /* Reduced padding to lift content */
     background: radial-gradient(circle at top right, rgba(146, 95, 240, 0.15), transparent 40%),
         radial-gradient(circle at bottom left, rgba(0, 210, 255, 0.1), transparent 40%);
-    min-height: 90vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
 }
@@ -250,6 +268,8 @@ h1 {
     display: block;
     object-fit: contain;
     box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 18px 36px -18px rgba(0, 0, 0, 0.5);
+    margin-top: -2rem;
+    /* Lift mockup higher on desktop */
 }
 
 /* Mockup UI */
@@ -471,6 +491,8 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 420px;
+    /* Force uniform height for all boxes */
     flex: 0 0 350px;
     /* Fixed width for horizontal scroll */
     scroll-snap-align: start;
@@ -558,7 +580,23 @@ h1 {
     line-height: 1.5;
 }
 
-/* Feature Badges */
+/* Preview Badge */
+.new-badge {
+    background: rgba(94, 62, 229, 0.15);
+    color: var(--primary);
+    border: 1px solid rgba(94, 62, 229, 0.3);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 15px rgba(94, 62, 229, 0.2);
+    display: inline-block;
+}
+
+/* Feature Badges Section */
 .key-features-section {
     padding: 8rem 0;
     text-align: center;
@@ -624,6 +662,9 @@ h1 {
     border: 1px solid var(--glass-border);
     transition: all 0.4s ease;
     flex: 0 0 300px;
+    height: 100%;
+    min-height: 520px;
+    /* Ensure uniform gallery height */
     /* Fixed width */
     scroll-snap-align: start;
 }
@@ -640,8 +681,77 @@ h1 {
     transition: transform 0.6s ease;
 }
 
-.gallery-card:hover .gallery-img {
-    transform: scale(1.1);
+/* Section Spacing */
+.designed-section,
+.why-section,
+.insights-section,
+.key-features-section,
+.gallery-section,
+.roadmap-section {
+    padding: 10rem 0;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, transparent, rgba(94, 62, 229, 0.05));
+}
+
+.roadmap-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2.5rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.roadmap-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.roadmap-item {
+    position: relative;
+    padding: 2.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    background: var(--bg-card);
+    flex: 0 0 350px;
+    scroll-snap-align: start;
+    transition: all 0.3s ease;
+}
+
+.roadmap-item:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.roadmap-status {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.roadmap-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.roadmap-item p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+
+    .modes-comparison,
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
@@ -823,11 +933,11 @@ footer p {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .insight-split {
@@ -837,5 +947,119 @@ footer p {
     .json-preview {
         padding: 1rem;
         font-size: 0.75rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Coming Soon badge */
+.coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-dim);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+/* Notify Section */
+.notify-section {
+    padding: 10rem 0;
+    background: radial-gradient(circle at center, rgba(94, 62, 229, 0.08), transparent 70%);
+}
+
+.notify-card {
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 32px;
+    backdrop-filter: blur(10px);
+}
+
+.notify-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.notify-input {
+    flex: 1;
+    min-width: 220px;
+    padding: 0.9rem 1.4rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.notify-input:focus {
+    border-color: var(--primary);
+}
+
+.notify-input::placeholder {
+    color: var(--text-dim);
+}
+
+.notify-note {
+    margin-top: 1.2rem !important;
+    font-size: 0.8rem !important;
+    opacity: 0.5;
+    margin-bottom: 0 !important;
+}
+
+/* Mobile section padding reduction */
+@media (max-width: 900px) {
+    .designed-section,
+    .why-section,
+    .insights-section,
+    .key-features-section,
+    .gallery-section,
+    .roadmap-section,
+    .notify-section {
+        padding: 5rem 0;
+    }
+
+    .notify-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .notify-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .notify-input {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .notify-form .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mode-card {
+        min-height: 340px;
+    }
+
+    .gallery-card {
+        min-height: auto;
+        flex: 0 0 240px;
     }
 }

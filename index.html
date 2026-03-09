@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HearoPilot | AI Recording & Transcription Assistant</title>
     <meta name="description"
-        content="Supercharge your meetings with HearoPilot. Real-time transcription, intelligent summaries, and task extraction using advanced AI.">
+        content="Supercharge your meetings with HearoPilot. Real-time transcription, intelligent summaries, and task extraction using advanced AI — 100% on-device, fully private.">
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HearoPilot | Private AI Voice Transcription">
+    <meta property="og:description" content="Real-time transcription, intelligent summaries, and task extraction — 100% offline on your device. Your data never leaves your pocket.">
+    <meta property="og:image" content="assets/screen0.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HearoPilot | Private AI Voice Transcription">
+    <meta name="twitter:description" content="Real-time transcription, intelligent summaries, and task extraction — 100% offline on your device.">
+    <meta name="twitter:image" content="assets/screen0.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,14 +35,13 @@
             </div>
             <div class="nav-container">
                 <nav class="nav-links">
-                    <a href="#designed">Designed</a>
                     <a href="#why">Why</a>
+                    <a href="#modes">Modes</a>
                     <a href="#features">AI Insights</a>
                     <a href="#gallery">Gallery</a>
                 </nav>
                 <div class="nav-actions">
-                    <a href="https://play.google.com/store/apps/details?id=com.hearopilot.app" target="_blank"
-                        class="btn-primary header-download">Download</a>
+                    <a href="#notify" class="btn-primary header-download">Coming Soon</a>
                     <button class="hamburger" id="menu-toggle" aria-label="Toggle Navigation">
                         <span></span>
                         <span></span>
@@ -46,58 +56,18 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
+                    <div class="privacy-tag"><span>🔒</span> 100% Local AI • No Cloud</div>
                     <h1 class="gradient-text">Private voice transcription. Smart AI Notes.</h1>
-                    <p>Turn your edge device into a secure, personal assistant. HearoPilot transcribes meetings,
-                        lectures,
-                        and voice memos into text, 100% offline and in real-time. Keep your conversations private.</p>
+                    <p>Experience the only transcription tool that never touches the cloud. HearoPilot processes your
+                        voice, text, and insights 100% offline on your device. Your data never leaves your pocket.</p>
+                    <div class="coming-soon-badge">🚀 Launching soon on Google Play</div>
                     <div class="hero-btns">
-                        <a href="https://play.google.com/store/apps/details?id=com.hearopilot.app" target="_blank"
-                            class="btn-primary">Download App</a>
-                        <a href="#designed" class="btn-secondary">Learn More</a>
+                        <a href="#notify" class="btn-primary">Get Notified</a>
+                        <a href="#why" class="btn-secondary">Learn More</a>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <img src="assets/screen0.png" alt="HearoPilot App Home Screen" class="app-demo">
-                </div>
-            </div>
-        </section>
-
-        <section id="designed" class="designed-section">
-            <div class="container">
-                <h2 class="section-title">Designed for Everyone</h2>
-                <p class="section-subtitle">Whether you're capturing business strategies or academic insights,
-                    HearoPilot adapts to your needs with total privacy.</p>
-                <div class="carousel-wrapper">
-                    <div class="carousel-btn prev" id="modes-prev">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M15 18l-6-6 6-6" />
-                        </svg>
-                    </div>
-                    <div class="carousel-btn next" id="modes-next">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M9 18l6-6-6-6" />
-                        </svg>
-                    </div>
-                    <div class="modes-grid" id="modes-track">
-                        <div class="mode-card">
-                            <div class="icon">💼</div>
-                            <h3>For Professionals</h3>
-                            <p>Focus on the conversation, not on taking notes. Generate meeting minutes automatically
-                                and securely. Perfect for sensitive business meetings.</p>
-                        </div>
-                        <div class="mode-card">
-                            <div class="icon">🎓</div>
-                            <h3>For Students</h3>
-                            <p>Record lectures and turn them into organized study guides. No internet needed in the
-                                classroom. Focus on learning, not typing.</p>
-                        </div>
-                        <div class="mode-card">
-                            <div class="icon">✍️</div>
-                            <h3>For Journalists</h3>
-                            <p>Protect your sources with offline transcription that ensures total confidentiality.
-                                Reliable recording in any environment.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -122,26 +92,76 @@
                         <div class="mode-card">
                             <div class="icon">🔒</div>
                             <h3>100% Private & Offline</h3>
-                            <p>Most apps send your voice to the cloud. We don't. Everything happens directly on your
-                                device. Your data never leaves your pocket.</p>
+                            <p>Military-grade local processing. Most apps send your voice to servers for analysis—we
+                                don't. Your recordings, transcripts, and AI notes are processed and stored only on your
+                                device.</p>
                         </div>
                         <div class="mode-card">
                             <div class="icon">⚡</div>
-                            <h3>Instant Real-Time STT</h3>
-                            <p>Watch your words turn into text instantly. No waiting for uploads or cloud processing.
-                                Real-time accuracy on the edge.</p>
+                            <h3>Instant Edge STT</h3>
+                            <p>Watch your words turn into text instantly with on-device LLMs. No waiting for uploads, no
+                                latency, and zero dependency on internet connections. Real-time accuracy without the
+                                risk.</p>
                         </div>
                         <div class="mode-card">
                             <div class="icon">🧠</div>
-                            <h3>Smart AI Summaries</h3>
-                            <p>Don't settle for a wall of text. Our AI analyzes your recordings to provide Quick
-                                Summaries, Key Points, and Action Items.</p>
+                            <h3>Local AI Insights</h3>
+                            <p>Private intelligence. Our local AI models analyze your speech to provide summaries and
+                                action items without ever exposing your data to third-party APIs or cloud trackers.</p>
                         </div>
                         <div class="mode-card">
                             <div class="icon">🔋</div>
-                            <h3>Battery Efficient</h3>
-                            <p>Optimized algorithms ensure you can record for hours without draining your battery.
-                                Unlimited recording with no session limits.</p>
+                            <h3>Efficient & Unlimited</h3>
+                            <p>Enterprise-ready performance. Optimized local algorithms ensure recording doesn't drain
+                                your battery. No session limits, no subscription tiers for privacy, just total control.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modes" class="designed-section">
+            <div class="container">
+                <h2 class="section-title">Smart Recording Modes</h2>
+                <p class="section-subtitle">HearoPilot adapts its AI intelligence based on your situation. Choose the
+                    mode that fits your needs.</p>
+                <div class="carousel-wrapper">
+                    <div class="carousel-btn prev" id="modes-prev">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="carousel-btn next" id="modes-next">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </div>
+                    <div class="modes-grid" id="modes-track">
+                        <div class="mode-card">
+                            <div class="icon">👂</div>
+                            <h3>Simple Listening</h3>
+                            <p>Perfect for quick notes or single thoughts. Provides a concise final summary of your
+                                recording.</p>
+                        </div>
+                        <div class="mode-card">
+                            <div class="icon">🤝</div>
+                            <h3>Short Meeting</h3>
+                            <p>Ideal for focused discussions. Real-time detection of tasks, suggestions, and key
+                                takeaways.</p>
+                        </div>
+                        <div class="mode-card">
+                            <div class="icon">🏛️</div>
+                            <h3>Long Meeting</h3>
+                            <p>Designed for conferences and lectures. Comprehensive analysis of extended sessions with
+                                periodic updates.</p>
+                        </div>
+                        <div class="mode-card">
+                            <div class="icon">🌐</div>
+                            <h3 style="display: inline-flex; align-items: center; gap: 0.5rem;">Live Translation <span
+                                    class="new-badge" style="margin: 0;">PREVIEW</span></h3>
+                            <p>Break language barriers. Translates speech as you speak, keeping the raw context intact
+                                and private.</p>
                         </div>
                     </div>
                 </div>
@@ -192,11 +212,54 @@
                 <h2 class="section-title">Key Features</h2>
                 <div class="features-list-grid">
                     <div class="feature-badge">🚀 Unlimited Recording</div>
-                    <div class="feature-badge">🚇 Works Offline</div>
-                    <div class="feature-badge">🔍 Searchable History</div>
+                    <div class="feature-badge">🚇 100% Offline</div>
+                    <div class="feature-badge">🌐 25+ UI Languages</div>
+                    <div class="feature-badge">📲 Screen-Off Support</div>
+                    <div class="feature-badge">🔄 Resumable Downloads</div>
                     <div class="feature-badge">🌙 Dark Mode Native</div>
                     <div class="feature-badge">🔋 Battery Optimized</div>
-                    <div class="feature-badge">🌐 Multi-language</div>
+                    <div class="feature-badge">🔍 Searchable History</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="roadmap-section">
+            <div class="container">
+                <h2 class="section-title">The Journey Ahead</h2>
+                <p class="section-subtitle">We're constantly evolving HearoPilot to be your ultimate private assistant.
+                </p>
+                <div class="carousel-wrapper">
+                    <div class="carousel-btn prev" id="roadmap-prev">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="carousel-btn next" id="roadmap-next">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </div>
+                    <div class="roadmap-grid" id="roadmap-track">
+                        <div class="roadmap-item">
+                            <div class="roadmap-status">UP NEXT</div>
+                            <h3>Export Everywhere</h3>
+                            <p>Save your transcripts and AI insights as PDF, TXT, or JSON for easy sharing and
+                                archiving.
+                            </p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-status">IN DEVELOPMENT</div>
+                            <h3>Speaker Diarization</h3>
+                            <p>Automatically detect and label different speakers in your meetings for even cleaner
+                                notes.
+                            </p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-status">PLANNED</div>
+                            <h3>Quick Record Widgets</h3>
+                            <p>One-tap recording directly from your home screen for those moments that can't wait.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -218,18 +281,35 @@
                     </div>
                     <div class="gallery-grid" id="gallery-track">
                         <div class="gallery-card"><img src="assets/screen1.png" alt="Transcription View"
-                                class="gallery-img"></div>
-                        <div class="gallery-card"><img src="assets/screen2.png" alt="History View" class="gallery-img">
-                        </div>
-                        <div class="gallery-card"><img src="assets/screen3.png" alt="Insights View" class="gallery-img">
-                        </div>
-                        <div class="gallery-card"><img src="assets/screen4.png" alt="Settings View" class="gallery-img">
-                        </div>
+                                class="gallery-img" loading="lazy"></div>
+                        <div class="gallery-card"><img src="assets/screen2.png" alt="History View"
+                                class="gallery-img" loading="lazy"></div>
+                        <div class="gallery-card"><img src="assets/screen3.png" alt="Insights View"
+                                class="gallery-img" loading="lazy"></div>
+                        <div class="gallery-card"><img src="assets/screen4.png" alt="Settings View"
+                                class="gallery-img" loading="lazy"></div>
+                        <div class="gallery-card"><img src="assets/screen6.png" alt="Recording View"
+                                class="gallery-img" loading="lazy"></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+        <section id="notify" class="notify-section">
+            <div class="container">
+                <div class="notify-card">
+                    <div class="privacy-tag" style="margin-bottom: 1.5rem;"><span>🚀</span> Launching Soon</div>
+                    <h2 class="section-title" style="margin-bottom: 1rem;">Be the first to try HearoPilot</h2>
+                    <p class="section-subtitle" style="margin-bottom: 2.5rem;">HearoPilot is coming to Google Play very soon. Drop your email and we'll let you know the moment it's live.</p>
+                    <form class="notify-form" onsubmit="handleNotify(event)">
+                        <input type="email" class="notify-input" placeholder="your@email.com" required>
+                        <button type="submit" class="btn-primary">Notify Me</button>
+                    </form>
+                    <p class="notify-note">No spam. One email when the app launches. That's it.</p>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <div class="container">

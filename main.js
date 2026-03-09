@@ -123,6 +123,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setupCarousel('modes-track', 'modes-prev', 'modes-next');
     setupCarousel('why-track', 'why-prev', 'why-next');
     setupCarousel('gallery-track', 'gallery-prev', 'gallery-next');
+    setupCarousel('roadmap-track', 'roadmap-prev', 'roadmap-next');
 
     console.log('HearoPilot Landing Page Loaded');
 });
+
+function handleNotify(e) {
+    e.preventDefault();
+    const form = e.target;
+    const input = form.querySelector('.notify-input');
+    const btn = form.querySelector('button[type="submit"]');
+    // In production, replace this with a real API call (e.g. Mailchimp, ConvertKit, etc.)
+    btn.textContent = '✓ You\'re on the list!';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    input.disabled = true;
+    input.value = '';
+    input.placeholder = 'Thanks! We\'ll be in touch.';
+}
