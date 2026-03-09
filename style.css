@@ -1284,3 +1284,9 @@ footer {
         display: none;
     }
 }
+@media (min-width: 768px) {
+    body {
+        background-image: radial-gradient(rgba(255,255,255,0.25) 1.5px, transparent 1.5px);
+        background-size: 18px 18px;
+    }
+}
