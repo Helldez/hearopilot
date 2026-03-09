@@ -586,6 +586,17 @@ h1 {
 
 .insight-visual {
     flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.insight-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 28px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 0 60px rgba(139, 92, 246, 0.3), 0 20px 60px rgba(0,0,0,0.5);
 }
 
 .json-preview {
@@ -633,7 +644,7 @@ h1 {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 3rem;
 }
