@@ -1390,7 +1390,7 @@ footer {
 }
 
 .video-phone-wrap {
-    flex: 0 0 auto;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
