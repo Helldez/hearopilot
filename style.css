@@ -1372,3 +1372,114 @@ footer {
         background-size: 18px 18px;
     }
 }
+
+/* ── Video / Demo Section ───────────────────────────────────────── */
+.video-section {
+    padding: 7rem 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.video-split {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.video-text {
+    flex: 1;
+}
+
+.video-phone-wrap {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Phone frame */
+.phone-mockup {
+    position: relative;
+    width: 280px;
+    border-radius: 42px;
+    background: #0a0a10;
+    border: 2px solid rgba(255,255,255,0.18);
+    box-shadow:
+        0 0 0 1px rgba(94,62,229,0.25),
+        0 0 60px rgba(94,62,229,0.3),
+        0 30px 80px rgba(0,0,0,0.7),
+        8px 8px 0 0 #ffffff;
+    overflow: hidden;
+    aspect-ratio: 9/19.5;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 22px;
+    background: #0a0a10;
+    border-radius: 20px;
+    z-index: 10;
+    border: 1.5px solid rgba(255,255,255,0.1);
+}
+
+.phone-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 40px;
+}
+
+.sound-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+    z-index: 20;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.sound-toggle:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.sound-toggle svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .video-split {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: flex-start;
+    }
+
+    .video-phone-wrap {
+        align-self: center;
+    }
+
+    .phone-mockup {
+        width: 240px;
+    }
+
+    .video-section {
+        padding: 5rem 0;
+    }
+}

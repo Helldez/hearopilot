@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Sound toggle for promo video
+    const soundBtn = document.getElementById('sound-toggle');
+    if (soundBtn) {
+        const video = soundBtn.closest('.phone-mockup').querySelector('.phone-video');
+        const iconOff = document.getElementById('sound-icon-off');
+        const iconOn = document.getElementById('sound-icon-on');
+        soundBtn.addEventListener('click', () => {
+            video.muted = !video.muted;
+            iconOff.style.display = video.muted ? '' : 'none';
+            iconOn.style.display = video.muted ? 'none' : '';
+        });
+    }
+
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
