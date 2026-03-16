@@ -1382,7 +1382,7 @@ footer {
 .video-split {
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: 4rem;
 }
 
 .video-text {
